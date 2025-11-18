@@ -1,0 +1,39 @@
+INSERT INTO customers (customerName, country) VALUES ('New Customer', 'India');
+
+UPDATE customers SET creditLimit = creditLimit * 1.10 WHERE country='Germany';
+
+DELETE FROM orders WHERE orderDate < '2005-01-01';
+
+INSERT INTO products (productCode, productName, productLine) VALUES ('S99_9999','New Product','Classic Cars');
+
+INSERT INTO payments (customerNumber, checkNumber, paymentDate, amount) VALUES (103,'CHK999','2024-11-18',5000);
+
+UPDATE offices SET phone='1234567890' WHERE city='London';
+
+DELETE FROM products WHERE productCode NOT IN (SELECT productCode FROM orderdetails);
+
+INSERT INTO employees (employeeNumber, lastName, firstName, reportsTo, officeCode) VALUES (9999,'New','Emp',1002,'1');
+
+SELECT * FROM customers WHERE creditLimit > 50000;
+
+SELECT * FROM employees WHERE officeCode = (SELECT officeCode FROM offices WHERE city='San Francisco');
+
+SELECT * FROM orders WHERE status='Shipped' AND YEAR(orderDate)=2004;
+
+SELECT * FROM products WHERE buyPrice BETWEEN 50 AND 100;
+
+SELECT * FROM employees WHERE reportsTo = 1143;
+
+SELECT * FROM customers WHERE city LIKE 'S%';
+
+SELECT * FROM orders WHERE comments LIKE '%urgent%';
+
+SELECT * FROM payments WHERE YEAR(paymentDate)=2003;
+
+SELECT customerNumber, SUM(amount) AS totalPayments FROM payments GROUP BY customerNumber;
+
+SELECT customerNumber, COUNT(*) AS paymentCount FROM payments GROUP BY customerNumber HAVING COUNT(*) > 3;
+
+SELECT officeCode, COUNT(*) AS employeeCount FROM employees GROUP BY officeCode;
+
+SELECT productLine, AVG(buyPrice) AS avgPrice FROM products GROUP BY productLine HAVING AVG(buyPrice) > 100;
