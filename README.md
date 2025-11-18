@@ -1,4 +1,3 @@
--- Q1: Student phone numbers in 1NF
 CREATE TABLE Student (
     StudentID INT PRIMARY KEY,
     Name VARCHAR(50)
@@ -21,7 +20,7 @@ INSERT INTO StudentPhone VALUES
 (103, '77777'),
 (103, '66666');
 
--- Q2: Orders items in 1NF
+
 CREATE TABLE Customer (
     CustomerID INT PRIMARY KEY,
     CustomerName VARCHAR(50)
@@ -44,7 +43,7 @@ INSERT INTO Order1NF VALUES
 ('O3', 1, 'Marker'),
 ('O3', 1, 'Pen');
 
--- Q3: Employee skills in 1NF
+
 CREATE TABLE Employee (
     EmpID INT PRIMARY KEY,
     EmpName VARCHAR(50)
@@ -67,7 +66,7 @@ INSERT INTO EmployeeSkill VALUES
 (3, 'Java'),
 (3, 'HTML');
 
--- Q4: Customer address in 1NF
+
 CREATE TABLE CustomerAddress (
     CustID INT PRIMARY KEY,
     Name VARCHAR(50),
@@ -79,7 +78,7 @@ INSERT INTO CustomerAddress VALUES
 (1, 'Meera', 'Hyderabad', 'Telangana', 'India'),
 (2, 'Ajay', 'Pune', 'Maharashtra', 'India');
 
--- Q5: Student Courses in 2NF
+
 CREATE TABLE Student2NF (
     StudentID INT PRIMARY KEY,
     StudentName VARCHAR(50)
@@ -108,7 +107,7 @@ INSERT INTO Marks2NF VALUES
 (1, 'C2', 85),
 (2, 'C1', 78);
 
--- Q6: Orders and products in 2NF
+
 CREATE TABLE Customer2NF (
     CustomerID INT PRIMARY KEY,
     CustomerName VARCHAR(50)
@@ -137,7 +136,7 @@ INSERT INTO OrderDetails2NF VALUES
 ('O1', 'P2', 1, 1),
 ('O2', 'P1', 2, 3);
 
--- Q7: Employee Projects in 2NF
+
 CREATE TABLE Employee2NF (
     EmpID INT PRIMARY KEY,
     EmpName VARCHAR(50)
@@ -165,7 +164,6 @@ INSERT INTO WorkHours2NF VALUES
 (1, 'P2', 30),
 (2, 'P1', 25);
 
--- Q8: Driver Routes in 2NF
 CREATE TABLE Driver2NF (
     DriverID VARCHAR(10) PRIMARY KEY,
     DriverName VARCHAR(50)
@@ -193,7 +191,7 @@ INSERT INTO DriverRoute2NF VALUES
 ('D1', 'R2'),
 ('D2', 'R1');
 
--- Q9: Orders with quantities (1NF then 2NF)
+
 CREATE TABLE CustomerOrders (
     OrderID VARCHAR(10),
     CustomerName VARCHAR(50),
