@@ -1,0 +1,98 @@
+QUESTION 1 – STUDENT_INFO
+
+HOD
+hod_id | hod_name
+1      | Dr. Rao
+2      | Prof. Mehta
+
+DEPARTMENT
+dept_id | dept_name | hod_id
+10      | ECE       | 1
+20      | CSE       | 2
+
+STUDENT
+stud_id | stud_name | dept_id
+1001    | Ajay      | 10
+1002    | Sneha     | 10
+1003    | Vikram    | 20
+-------------------------------------------------------------
+
+QUESTION 2 – EMP_PROJECT
+
+EMPLOYEE
+emp_id | emp_name
+501    | Ramesh
+502    | Geeta
+
+CLIENT
+client_id | client_name
+301       | Acme Ltd
+302       | Globex Inc
+
+PROJECT
+proj_id | proj_name   | client_id
+201     | BillingApp  | 301
+202     | CRM         | 302
+
+EMP_PROJECT
+emp_id | proj_id
+501    | 201
+501    | 202
+502    | 202
+-------------------------------------------------------------
+
+QUESTION 3 – LIBRARY
+
+AUTHOR
+author_id | author_name
+11        | K. Verma
+12        | S. Iyer
+
+PUBLISHER
+publisher_id | publisher_name
+41           | Pearson
+42           | OUP
+
+BOOK
+book_id | book_title         | author_id | publisher_id
+9001    | Signals & Systems  | 11        | 41
+9002    | Digital Design     | 12        | 42
+9003    | Embedded Systems   | 11        | 42
+-------------------------------------------------------------
+
+QUESTION 4 – SALES
+
+CATEGORY
+category     | category_discount
+Electronics  | 10.00
+Clothing     | 15.00
+
+PRODUCT
+product_id | product_name | category
+701        | Smartphone   | Electronics
+702        | T-Shirt      | Clothing
+
+SALES
+sale_id | product_id
+90001   | 701
+90002   | 702
+-------------------------------------------------------------
+
+QUESTION 5 – ENROLL
+
+STUDENT
+roll_no | stud_name
+20101   | Karan
+20102   | Maya
+
+COURSE
+course_id | course_name | credits
+30101     | DBMS        | 4
+30102     | OS          | 3
+
+ENROLL
+roll_no | course_id
+20101   | 30101
+20101   | 30102
+20102   | 30101
+-------------------------------------------------------------
