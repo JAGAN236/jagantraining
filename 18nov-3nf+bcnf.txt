@@ -96,3 +96,108 @@ roll_no | course_id
 20101   | 30102
 20102   | 30101
 -------------------------------------------------------------
+QUESTION 6 – COURSE_FACULTY
+
+COURSE
+course_code | course_name
+CS101       | Data Structures
+CS102       | OOP
+
+FACULTY
+faculty_id | faculty_name | room_no
+F11        | Raman        | R21
+F12        | Meera        | R22
+
+ROOM
+room_no | faculty_id
+R21     | F11
+R22     | F12
+
+
+QUESTION 7 – ORDERS
+
+CUSTOMER
+cust_id | cust_name | city
+C01     | Arjun     | Delhi
+C02     | Meena     | Mumbai
+
+CITY
+city  | pincode
+Delhi | 110001
+Mumbai| 400001
+
+ORDERS
+order_id | cust_id
+O111     | C01
+O112     | C02
+
+
+QUESTION 8 – HOSTEL
+
+STUDENT
+student_id | student_name | room_no
+S01        | Karan        | R11
+S02        | Maya         | R12
+
+WARDEN
+warden_id | warden_name
+W01       | Sharma
+W02       | Rao
+
+ROOM
+room_no | warden_id
+R11     | W01
+R12     | W02
+
+
+QUESTION 9 – HOSPITAL
+
+DOCTOR
+doc_id | doc_name
+D01    | Varma
+D02    | Iqbal
+
+PATIENT
+patient_id | patient_name | disease | room_no
+P01        | Raju         | Fever   | R51
+P02        | Neha         | Injury  | R52
+
+ROOM
+room_no | room_type
+R51     | General
+R52     | ICU
+
+
+QUESTION 10 – CUSTOM BCNF PROBLEM
+
+ORIGINAL ATTRIBUTES
+order_id | cust_id | cust_name | product_id | product_name | category | category_manager
+
+FDs:
+1. order_id → cust_id, product_id  
+2. cust_id → cust_name  
+3. product_id → product_name, category  
+4. category → category_manager  
+5. category_manager → category  
+
+BCNF TABLES
+
+ORDERS
+order_id | cust_id | product_id
+O201     | C01     | P501
+O202     | C02     | P502
+
+CUSTOMER
+cust_id | cust_name
+C01     | Arjun
+C02     | Riya
+
+PRODUCT
+product_id | product_name | category
+P501       | Laptop       | Electronics
+P502       | Phone        | Electronics
+
+CATEGORY
+category | category_manager
+Electronics | Manoj
+
